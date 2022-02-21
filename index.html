@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>vue js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style> 
+  .blue{
+    color: blue;
+    text-decoration: underline;
+    font-size: 100px;
+  }
+  </style>
+</head>
+
+<body>
+
+
+  <div id='app'>
+    <h1 :class="classes">mahmoud</h1>
+    <a :href="google">click</a><br>
+    <a :href="youtube">another click</a><br><br>
+
+    <button v-on:click="salary++">click me</button>
+    <button v-on:click="salary--">click me</button>
+    <button v-on:click="changeSalary(-20)">change me</button>
+    
+
+    <h1>{{ name }}</h1>
+    <input type="text" v-model="name">
+    <br><br>
+
+    <div>Selected: {{ selected }}</div>
+
+<select v-model="selected">
+  <option disabled value="">Please select one</option>
+  <option>A</option>
+  <option>B</option>
+  <option>C</option>
+</select>
+<br><br>
+
+
+<div v-if="Math.random() > 0.5">
+  Now you see me
+</div>
+<div v-else>
+  Now you don't
+</div>
+
+
+
+<br><br>
+  <h1>{{ firstName }}</h1>
+  <h1>{{ lastName }}</h1>
+  <h2>{{ age }}</h2>
+  <h2>{{ myName() }}</h2>
+  <h2>{{   myNextName() }}</h2>
+  <h2>{{   myAge() }}</h2>
+  <h2>{{   putYourName('mahmoud ali') }}</h2>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
